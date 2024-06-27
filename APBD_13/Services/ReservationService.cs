@@ -39,7 +39,12 @@ public class ReservationService : IReservationService
             .Where(r => r.CustomerID == customerID && r.ReservationStatus.Name == status.ToUpper())
             .ToList();
 
-        return reservation;
+        //unfinished
+        var response = new GetCustomerReservationsByStatusResponseModel {
+            Reservations = new List<ReservationModel> { }
+        };
+        
+        return response;
         
     }
 
