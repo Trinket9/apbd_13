@@ -23,7 +23,7 @@ public static class ReservationEndpoint
         }
     }
 
-    private static async Task<IResult> AddOrder(int id_customer, List<AddNewReservationModel> request, 
+    private static async Task<IResult> AddOrder(int id_customer, AddNewReservationModel request, 
         IReservationService service, CancellationToken cancellationToken) {
         try {
             service.AddReservation(id_customer, request, cancellationToken);
